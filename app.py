@@ -7,8 +7,8 @@ app = flask.Flask(__name__)
 
 @app.route('/', methods = ['GET'])
 def home():
-    mobile = request.args['mobile']
-    token = request.args['token']
+    mobile = '9172310389'
+    token = 'SFGtP2w2kuBf494bSbmUaRCYeAdEcLHi'
 
     authy_api = AuthyApiClient(token)
 
