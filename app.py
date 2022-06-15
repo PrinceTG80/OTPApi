@@ -16,7 +16,7 @@ def home():
         country_code = 91)
         output = str(user.id)
         if user.ok():
-            sms = authy_api.users.request_sms(str(user.id),{'action': 'login', 'action_message': 'Login code'})
+            sms = authy_api.users.request_sms(str(user.id),{'action': 'login', 'message': 'Login code'})
             if sms.ok():
                 output = output + " " +str(sms.content)
             return output
