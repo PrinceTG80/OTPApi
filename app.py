@@ -8,7 +8,7 @@ authy_api = AuthyApiClient(token)
 
 @app.route('/', methods = ['GET'])
 def home():
-    mobile = str(request.arg(['mobile']))
+    mobile = str(request.args(['mobile']))
     try: 
         user = authy_api.users.create(
         email='tgavkhare80@gmail.com',
