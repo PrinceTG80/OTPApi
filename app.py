@@ -10,12 +10,12 @@ user = authy_api.users.create(
         email='tgavkhare80@gmail.com',
         phone=mobile,
         country_code = 91)
-
+output = str(user.id)
 @app.route('/', methods = ['GET'])
 def home():
     try: 
         if user.ok():
-            return "passed"
+            return output
         else:
             return "error"
     except:
