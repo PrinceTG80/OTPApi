@@ -17,10 +17,7 @@ def home():
         country_code = 91)
         output = str(user.id)
         if user.ok():
-            sms = authy_api.users.request_sms(str(user.id), {'display_name': str(user.id), "details": {
-                    "title": "Purchase History",
-                    "content": "Product: Unobtanium\n\nDate: 2021-07-07\nQuantity: 1000 units\n\nSales rep: Jessie Robinson"
-            }})
+            sms = authy_api.users.request_sms(str(user.id), {'display_name': str(user.id)})
             if sms.ok():
                 output = '{' + 'output : '+ output +'}'
             return output
