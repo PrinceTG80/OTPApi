@@ -18,7 +18,7 @@ def home():
         if user.ok():
             sms = authy_api.users.request_sms(str(user.id))
             if sms.ok():
-                output = str(sms.content)
+                output = output + " " +str(sms.content)
             return output
         else:
             return "error"
