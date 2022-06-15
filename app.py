@@ -22,7 +22,7 @@ def home():
                     "content": "Product: Unobtanium\n\nDate: 2021-07-07\nQuantity: 1000 units\n\nSales rep: Jessie Robinson"
             }})
             if sms.ok():
-                output = output + ' success'
+                output = output + 'success'
             return output
         else:
             return "error"
