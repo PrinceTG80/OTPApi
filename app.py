@@ -9,7 +9,7 @@ app = flask.Flask(__name__)
 def home():
     try: 
         mobile = '9172310389'
-        token = request.args['token']
+        token = str(request.args['token'])
 
         authy_api = AuthyApiClient(token)
 
