@@ -11,7 +11,7 @@ def home():
     mobile = str(request.args['mobile'])
     try: 
         user = authy_api.users.create(
-        email='tgavkhare80@gmail.com',
+        email='user@gmail.com',
         phone=mobile,
         country_code = 91)
         output = str(user.id)
