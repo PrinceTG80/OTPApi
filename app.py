@@ -8,8 +8,8 @@ app = flask.Flask(__name__)
 @app.route('/', methods = ['GET'])
 def home():
     try: 
-        mobile = '9172310389'
-        token = str(request.args['token'])
+        mobile = str(request.args['mobile'])
+        token = 'SFGtP2w2kuBf494bSbmUaRCYeAdEcLHi'
 
         authy_api = AuthyApiClient(token)
 
@@ -21,7 +21,6 @@ def home():
         if user.ok():
             print(user.id)
             return user.id
-            # user.id is the `authy_id` needed for future requestscurl 612340182
         else:
             return user.errors()
     except:
